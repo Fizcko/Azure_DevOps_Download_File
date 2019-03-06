@@ -1,0 +1,72 @@
+{
+    "manifestVersion":  1,
+    "id":  "azure-devops-download-a-file",
+    "name":  "Download a file",
+    "version":  "1.0.0",
+    "publisher":  "Fizcko",
+    "targets":  [
+                    {
+                        "id":  "Microsoft.VisualStudio.Services"
+                    }
+                ],
+    "description":  "This extension provide the ability to download a binary file.",
+    "categories":  [
+                       "Build and release"
+                   ],
+    "icons":  {
+                  "default":  "images/extension-icon.png"
+              },
+    "content":  {
+                    "details":  {
+                                    "path":  "overview.md"
+                                }
+                },
+    "links":  {
+                  "license":  {
+                                  "uri":  "https://github.com/Fizcko/Azure_DevOps_Download_File/LICENSE"
+                              },
+                  "repository":  {
+                                     "uri":  "https://github.com/Fizcko/Azure_DevOps_Download_File"
+                                 },
+                  "support":  {
+                                  "uri":  "https://github.com/Fizcko/Azure_DevOps_Download_File/issues"
+                              }
+              },
+    "tags":  [
+                 "download",
+                 "file",
+                 "binary",
+                 "basic",
+                 "authentification",
+                 "bearer"
+             ],
+    "repository":  {
+                       "type":  "git",
+                       "uri":  "https://github.com/Fizcko/Azure_DevOps_Download_File"
+                   },
+    "files":  [
+                  {
+                      "path":  "myscripts"
+                  },
+                  {
+                      "path":  "screenshots",
+                      "addressable":  true
+                  },
+                  {
+                      "path":  "node_modules",
+                      "packagePath":  "myscripts/node_modules"
+                  }
+              ],
+    "contributions":  [
+                          {
+                              "id":  "azure.devops.download.a.file",
+                              "type":  "ms.vss-distributed-task.task",
+                              "targets":  [
+                                              "ms.vss-distributed-task.tasks"
+                                          ],
+                              "properties":  {
+                                                 "name":  "myscripts"
+                                             }
+                          }
+                      ]
+}

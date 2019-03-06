@@ -1,0 +1,5 @@
+# Add your exclusions
+node_modules
+*.vsix
+**/*.js
+**/*.js.map

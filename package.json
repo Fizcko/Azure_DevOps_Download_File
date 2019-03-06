@@ -1,0 +1,16 @@
+{
+  "name": "azure-devops-download-a-file",
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "powershell  -ExecutionPolicy ByPass -Command ./build_job.ps1"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "typescript": "^3.3.3333",
+    "vsts-task-lib": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.10.42",
+    "@types/q": "^1.5.1"
+  }
+}
