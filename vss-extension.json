@@ -2,7 +2,7 @@
     "manifestVersion":  1,
     "id":  "azure-devops-download-a-file",
     "name":  "Download a file",
-    "version":  "1.0.0",
+    "version":  "1.0.1",
     "publisher":  "Fizcko",
     "targets":  [
                     {
@@ -11,7 +11,7 @@
                 ],
     "description":  "This extension provide the ability to download a binary file.",
     "categories":  [
-                       "Build and release"
+                       "Azure Pipelines"
                    ],
     "icons":  {
                   "default":  "images/extension-icon.png"
@@ -23,7 +23,7 @@
                 },
     "links":  {
                   "license":  {
-                                  "uri":  "https://github.com/Fizcko/Azure_DevOps_Download_File/LICENSE"
+                                  "uri":  "https://github.com/Fizcko/Azure_DevOps_Download_File/blob/master/LICENSE"
                               },
                   "repository":  {
                                      "uri":  "https://github.com/Fizcko/Azure_DevOps_Download_File"
