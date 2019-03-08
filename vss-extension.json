@@ -4,6 +4,7 @@
     "name":  "Download a file",
     "version":  "1.0.1",
     "publisher":  "Fizcko",
+    "public": true,
     "targets":  [
                     {
                         "id":  "Microsoft.VisualStudio.Services"
