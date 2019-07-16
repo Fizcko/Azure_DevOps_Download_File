@@ -7,11 +7,11 @@ Parameters :
 - **Download URL**: Enter the url of the file to download (http or https protocols are supported).
 - **Target path folder**: Directory to save the file (Will be created if he doesn\'t exist).
 - **Target file name**: Rename target file.
-- **Authentification type**: Define which authentication methods.
+- **Authentication type**: Define which authentication methods.
 - **Ignore certificate checks**: Ignore errors from certificate checks.
 - **Fail if response codes other than 2xx**: Fail task if the HTTP response code is not 2xx.
 
-## Authentification modes
+## Authentication modes
 
 ### No Auth
 
@@ -23,8 +23,8 @@ Parameters :
 ![Basic Auth](screenshots/auth_basic.png)
 
 Parameters :
-- **Username**: Username for the Basic Authentification.
-- **Password**: Password for the Basic Authentification.
+- **Username**: Username for the Basic Authentication.
+- **Password**: Password for the Basic Authentication.
 
 
 ### Bearer Token
@@ -32,4 +32,19 @@ Parameters :
 ![Basic Auth](screenshots/auth_bearer.png)
 
 Parameters :
-- **Token**: Token for the Bearer Token Authentification.
+- **Token**: Token for the Bearer Token Authentication.
+
+
+## Release note
+
+### v1.0.6
+- Improve errors management
+
+### v1.0.5
+- Fix dependency bug introduced in v1.0.3
+
+### v1.0.3
+- Fix : Set default authentication to 'none'
+
+### v1.0.2
+- First release

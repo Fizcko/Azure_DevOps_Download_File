@@ -13,7 +13,7 @@
     "version":  {
                     "Major":  1,
                     "Minor":  0,
-                    "Patch":  1
+                    "Patch":  6
                 },
     "instanceNameFormat":  "Download a File",
     "groups":  [
@@ -54,15 +54,15 @@
                    {
                        "name":  "authType",
                        "type":  "radio",
-                       "label":  "Authentification type",
-                       "defaultValue":  "1",
+                       "label":  "Authentication type",
+                       "defaultValue":  "noAuth",
                        "required":  true,
                        "options":  {
                                        "noAuth":  "No Auth",
                                        "basic":  "Basic Auth",
                                        "bearer":  "Bearer Token"
                                    },
-                       "helpMarkDown":  "Define authentification type",
+                       "helpMarkDown":  "Define authentication type",
                        "groupName":  "groupOne"
                    },
                    {
@@ -71,7 +71,7 @@
                        "label":  "Username",
                        "defaultValue":  "",
                        "required":  true,
-                       "helpMarkDown":  "Enter the username for the Basic Authentification.",
+                       "helpMarkDown":  "Enter the username for the Basic Authentication.",
                        "groupName":  "groupOne",
                        "visibleRule":  "authType = basic"
                    },
@@ -81,7 +81,7 @@
                        "label":  "Password",
                        "defaultValue":  "",
                        "required":  true,
-                       "helpMarkDown":  "Enter the password for the Basic Authentification.",
+                       "helpMarkDown":  "Enter the password for the Basic Authentication.",
                        "groupName":  "groupOne",
                        "visibleRule":  "authType = basic"
                    },
@@ -91,7 +91,7 @@
                        "label":  "Token",
                        "defaultValue":  "",
                        "required":  true,
-                       "helpMarkDown":  "Enter the token for the Bearer Token Authentification.",
+                       "helpMarkDown":  "Enter the token for the Bearer Token Authentication.",
                        "groupName":  "groupOne",
                        "visibleRule":  "authType = bearer"
                    },

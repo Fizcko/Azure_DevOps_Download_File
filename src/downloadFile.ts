@@ -1,4 +1,4 @@
-import tl = require('vsts-task-lib/task');
+import tl = require('azure-pipelines-task-lib/task');
 const url = require('url');
 const http = require('http');
 const https = require("https");
@@ -17,9 +17,6 @@ async function run() {
 		var strTargetDir = tl.getInput('strTargetDir', true);
 		var strTargetFilename = tl.getInput('strTargetFilename', true);
 		var authType = tl.getInput('authType', true);
-		var basicAuthUsername = tl.getInput('basicAuthUsername', false);
-		var basicAuthPassword = tl.getInput('basicAuthPassword', false);
-		var bearerToken = tl.getInput('bearerToken', false);
 		var ignoreCertificateChecks = tl.getBoolInput('ignoreCertificateChecks', true);
 		var catchResponse = tl.getBoolInput('catchResponse', true);
 
@@ -73,7 +70,9 @@ async function run() {
 		// Set authentification if needed
 		switch(authType){
 			case "basic":
-				console.log("[INFO] Authentification type : 'Basic Auth'");
+				var basicAuthUsername = tl.getInput('basicAuthUsername', true);
+				var basicAuthPassword = tl.getInput('basicAuthPassword', true);
+				console.log("[INFO] Authentication type : 'Basic Auth'");
 				console.log("[INFO] Username : '" + basicAuthUsername + "'");
 				console.log("[INFO] Password : '" + basicAuthPassword + "'");
 				options.headers = {
@@ -81,7 +80,8 @@ async function run() {
 				}
 				break;
 			case "bearer":
-				console.log("[INFO] Authentification type : 'Bearer Token'");
+				var bearerToken = tl.getInput('bearerToken', true);
+				console.log("[INFO] Authentication type : 'Bearer Token'");
 				console.log("[INFO] Token : '" + bearerToken + "'");
 				options.headers = {
 					'Authorization': 'Bearer ' + bearerToken
@@ -89,7 +89,7 @@ async function run() {
 				break;
 			case "noAuth":
 			default:
-				console.log("[INFO] Authentification type : 'No Auth'");
+				console.log("[INFO] Authentication type : 'No Auth'");
 				break;
 		}
 		
@@ -123,11 +123,9 @@ async function run() {
 				console.log("[INFO] File infos : " + output + " (" + displayFileSize(fileSizeInBytes) + ")");
 			});
 			
-			req.on('error', function catchError(error) {
-				throw new Error("Error when download file [" + statusCode + "] : " + error);
-			});
-			
-		});
+		}).on('error', function catchError(error) {
+            throw new Error("Error when download file : " + error);
+        });
 		
 		req.end();
 		

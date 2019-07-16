@@ -1,0 +1,20 @@
+{
+    "download_file": {
+        "strUrl": "",
+        "strTargetDir": "",
+        "strTargetFilename": "",
+        "ignore_ssl": true,
+        "catch_response": true,
+        "auth_type": "basic"
+    },
+    "auth": {
+        "noAuth": {},
+        "basic":{
+            "basicAuthUsername": "",
+            "basicAuthPassword": ""
+        },
+        "bearer":{
+            "bearerToken": ""
+        }
+    }
+}
