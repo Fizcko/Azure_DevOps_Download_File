@@ -12,8 +12,8 @@
     "author":  "Fizcko",
     "version":  {
                     "Major":  1,
-                    "Minor":  0,
-                    "Patch":  6
+                    "Minor":  1,
+                    "Patch":  0
                 },
     "instanceNameFormat":  "Download a File",
     "groups":  [

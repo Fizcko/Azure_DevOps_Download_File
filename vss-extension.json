@@ -2,7 +2,7 @@
     "manifestVersion":  1,
     "id":  "azure-devops-download-a-file",
     "name":  "Download a file",
-    "version":  "1.0.6",
+    "version":  "1.1.0",
     "publisher":  "Fizcko",
     "public":  true,
     "targets":  [
