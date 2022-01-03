@@ -131,7 +131,7 @@ function downloadFile(strUrl: string, ignoreCertificateChecks: boolean, authType
 			var binaryData = new Stream();
 			var statusCode = res.statusCode;
 			
-			if(parseInt(statusCode) == 302){
+			if(parseInt(statusCode) == 301 || parseInt(statusCode) == 302 || parseInt(statusCode) == 303){
 				if(res.headers['location']){
 					var location = res.headers['location'];
 					console.log("[INFO] Redirection found new url : '" + location + "'");
