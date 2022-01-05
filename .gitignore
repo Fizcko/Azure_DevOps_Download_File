@@ -4,3 +4,4 @@ node_modules
 *.vsix
 myscripts/*.js
 myscripts/*.js.map
+.taskkey

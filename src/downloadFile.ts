@@ -87,8 +87,9 @@ function getOptions(strUrl: string, ignoreCertificateChecks: boolean, authType: 
 			console.log("[INFO] Authentication type : 'Basic Auth'");
 			console.log("[INFO] Username : '" + basicAuthUsername + "'");
 			console.log("[INFO] Password : '" + basicAuthPassword + "'");
+			var base64 = Buffer.from(`${basicAuthUsername}:${basicAuthPassword}`).toString('base64');
 			options.headers = {
-				'Authorization': 'Basic ' + new Buffer(basicAuthUsername + ':' + basicAuthPassword).toString('base64')
+				'Authorization': 'Basic ' + base64
 			}
 			break;
 		case "bearer":

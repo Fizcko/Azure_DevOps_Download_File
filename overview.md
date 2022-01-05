@@ -37,6 +37,10 @@ Parameters :
 
 ## Release note
 
+### v2.0.0
+- Handle HTTP error 301 and 303
+- Update task to Node 10
+
 ### v1.0.6
 - Improve errors management
 
