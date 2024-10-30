@@ -1,8 +1,9 @@
 {
+    "task_node_version": 20,
     "download_file": {
-        "strUrl": "",
-        "strTargetDir": "",
-        "strTargetFilename": "",
+        "strUrl": "https://raw.githubusercontent.com/Fizcko/Azure_DevOps_Download_File/refs/heads/master/screenshots/auth_basic.png",
+        "strTargetDir": ".",
+        "strTargetFilename": "auth_basic.png",
         "ignore_ssl": true,
         "catch_response": true,
         "auth_type": "basic"
@@ -10,8 +11,8 @@
     "auth": {
         "noAuth": {},
         "basic":{
-            "basicAuthUsername": "",
-            "basicAuthPassword": ""
+            "basicAuthUsername": "toto",
+            "basicAuthPassword": "123456"
         },
         "bearer":{
             "bearerToken": ""

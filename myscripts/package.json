@@ -1,7 +1,7 @@
 {
   "name": "DownloadAFile",
   "dependencies": {
-    "azure-pipelines-task-lib": "2.8.0",
+    "azure-pipelines-task-lib": "4.17.3",
     "mkdirp": "0.5.1"
   },
   "engines": {
